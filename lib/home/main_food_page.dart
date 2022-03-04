@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/home/food_body_page.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:food_delivery/widgets/small_text.dart';
@@ -29,9 +30,16 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         text: "Bangladesh",
                         color: AppColors.mainColor,
                       ),
-                      SmallText(
-                        text: "Narshingdi",
-                        color: Colors.black54,
+                      Row(
+                        children: [
+                          SmallText(
+                            text: "Narshingdi",
+                            color: Colors.black54,
+                          ),
+                          Icon(
+                            Icons.arrow_drop_down_rounded,
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -51,6 +59,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
+          FoodBodyPage(),
         ],
       ),
     );
