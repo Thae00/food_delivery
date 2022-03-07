@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/widgets/big_text.dart';
+import 'package:food_delivery/widgets/icon_and_text_widget.dart';
 import 'package:food_delivery/widgets/small_text.dart';
 
 class FoodBodyPage extends StatefulWidget {
@@ -17,7 +18,6 @@ class _FoodBodyPageState extends State<FoodBodyPage> {
   Widget build(BuildContext context) {
     return Container(
       height: 320,
-      color: Colors.redAccent,
       child: PageView.builder(
         controller: pageController,
         itemCount: 5,
@@ -85,6 +85,29 @@ class _FoodBodyPageState extends State<FoodBodyPage> {
                         width: 10,
                       ),
                       SmallText(text: "comments"),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconAndTextWidget(
+                        icon: Icons.circle_sharp,
+                        text: "Normal",
+                        iconColor: AppColors.iconColor1,
+                      ),
+                      IconAndTextWidget(
+                        icon: Icons.location_on,
+                        text: "1.7km",
+                        iconColor: AppColors.mainColor,
+                      ),
+                      IconAndTextWidget(
+                        icon: Icons.access_time_rounded,
+                        text: "32mins",
+                        iconColor: AppColors.iconColor2,
+                      ),
                     ],
                   ),
                 ],
