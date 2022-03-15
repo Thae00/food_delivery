@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 // 844
@@ -38,5 +39,7 @@ class Dimensions {
 
   //popular food
   static double popularFoodImgSize = screenHeight / 2.41; // 844/350
+
+  static double bottomNavHeightBar = screenHeight / 5.37;
 
 }
