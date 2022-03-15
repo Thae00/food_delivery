@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/app_column.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
+import 'package:food_delivery/widgets/expandable_text_widget.dart';
 
 import '../../utils/colors.dart';
 import '../../widgets/big_text.dart';
@@ -70,6 +71,14 @@ class PopularFoodDetail extends StatelessWidget {
                     height: Dimensions.height20,
                   ),
                   BigText(text: "Introduce"),
+                  SizedBox(
+                    height: Dimensions.height20,
+                  ),
+                  Expanded(
+                      child: SingleChildScrollView(
+                          child: ExpandableTextWidget(
+                              text:
+                                  "Chicken marinated in a spiced yoghurt is placed in a large pot, then layered with fired onions (cheekyeasy sub below!), fresh coriander/cilantro, then par boiled put the fire. It is so delious!***Search over 1 million types of poems by form, occasion, word, theme, and more. Find, read, and share the perfect poem written by one of over 40,000 modern and famous poets from all around the world. Definition of a poem (What is a poem?).Poems of all kinds on themes such as love, sister, wife, for her, wedding, acrostic, flower, haiku, friendship and more poems are submitted each day. Read short, long, best, and famous poems all on different topics.Chicken marinated in a spiced yoghurt is placed in a large pot, then layered with fired onions (cheekyeasy sub below!), fresh coriander/cilantro, then par boiled put the fire. It is so delious!***Search over 1 million types of poems by form, occasion, word, theme, and more. Find, read, and share the perfect poem written by one of over 40,000 modern and famous poets from all around the world. Definition of a poem (What is a poem?).Poems of all kinds on themes such as love, sister, wife, for her, wedding, acrostic, flower, haiku, friendship and more poems are submitted each day. Read short, long, best, and famous poems all on different topics!.***"))),
                 ],
               ),
             ),
@@ -87,36 +96,58 @@ class PopularFoodDetail extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.buttonBackgroundColor,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(Dimensions.radius20*2),
-            topRight: Radius.circular(Dimensions.radius20*2),
+            topLeft: Radius.circular(Dimensions.radius20 * 2),
+            topRight: Radius.circular(Dimensions.radius20 * 2),
           ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              padding: EdgeInsets.only(left: Dimensions.width20,right: Dimensions.width20, top: Dimensions.height20, bottom: Dimensions.height20,),
+              padding: EdgeInsets.only(
+                left: Dimensions.width20,
+                right: Dimensions.width20,
+                top: Dimensions.height20,
+                bottom: Dimensions.height20,
+              ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimensions.radius20),
                 color: Colors.white,
               ),
               child: Row(
                 children: [
-                  Icon(Icons.remove, color: AppColors.signColor,),
-                  SizedBox(width: Dimensions.width10/2,),
+                  Icon(
+                    Icons.remove,
+                    color: AppColors.signColor,
+                  ),
+                  SizedBox(
+                    width: Dimensions.width10 / 2,
+                  ),
                   BigText(text: "0"),
-                  SizedBox(width: Dimensions.width10/2,),
-                  Icon(Icons.add, color: AppColors.signColor,),
+                  SizedBox(
+                    width: Dimensions.width10 / 2,
+                  ),
+                  Icon(
+                    Icons.add,
+                    color: AppColors.signColor,
+                  ),
                 ],
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: Dimensions.height20,bottom: Dimensions.height20,left: Dimensions.width20, right: Dimensions.width20),
+              padding: EdgeInsets.only(
+                  top: Dimensions.height20,
+                  bottom: Dimensions.height20,
+                  left: Dimensions.width20,
+                  right: Dimensions.width20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimensions.radius20),
                 color: AppColors.mainColor,
               ),
-              child: BigText(text: "\$10 | Add to cart", color: Colors.white,),
+              child: BigText(
+                text: "\$10 | Add to cart",
+                color: Colors.white,
+              ),
             ),
           ],
         ),
