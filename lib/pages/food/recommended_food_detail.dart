@@ -64,6 +64,22 @@ class RecommendedFoodDetail extends StatelessWidget {
 
         ],
       ),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: Dimensions.width20 *2.5, right: Dimensions.width20 *2.5, top: Dimensions.height10, bottom: Dimensions.height10,),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                AppIcon(backgroundColor: AppColors.mainColor, iconColor: Colors.white,icon: Icons.remove, iconSize: Dimensions.iconSize24,),
+                BigText(text: "\$12.88" + " X "+ "0", color: AppColors.mainBlackColor, size: Dimensions.font26,),
+                AppIcon(backgroundColor: AppColors.mainColor, iconColor: Colors.white,icon: Icons.add,iconSize: Dimensions.iconSize24,),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
